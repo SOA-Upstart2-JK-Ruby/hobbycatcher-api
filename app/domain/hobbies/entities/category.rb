@@ -3,7 +3,7 @@
 require 'dry-types'
 require 'dry-struct'
 
-require_relative 'hobby'
+require_relative 'course'
 
 module HobbyCatcher
   module Entity
@@ -14,10 +14,10 @@ module HobbyCatcher
       attribute :id,             Integer.optional
       attribute :ud_category_id, Strict::Integer
       attribute :name,           Strict::String
-      attribute :ownhobby,       Hobby
+      attribute :courses,        Strict::Array.of(Course)
 
       def to_attr_hash
-        to_hash.reject { |key, _| %i[id ownhobby].include? key }
+        to_hash.reject { |key, _| %i[id courses].include? key }
       end
     end
   end

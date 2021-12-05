@@ -18,6 +18,7 @@ module HobbyCatcher
       class DataMapper
         def initialize(ownhobby_id)
           hobby = HobbyCatcher::Database::HobbyOrm.where(id: ownhobby_id).first
+          @categories = hobby.owned_categories.map(&:to_hash)
           @hobby = hobby.to_hash
         end
 
@@ -27,7 +28,8 @@ module HobbyCatcher
             name:        name,
             img:         img,
             description: description,
-            user_num:    user_num
+            user_num:    user_num,
+            categories:  categories
           )
         end
 
@@ -47,6 +49,12 @@ module HobbyCatcher
 
         def user_num
           @hobby[:user_num]
+        end
+
+        def categories
+          @categories.map do |category|
+            CategoryMapper.build_entity(category[:name])
+          end
         end
       end
     end

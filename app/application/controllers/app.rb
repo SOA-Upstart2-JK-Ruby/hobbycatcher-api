@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require 'roda'
-require 'slim'
-require 'slim/include'
-require 'yaml'
 
 # :reek:RepeatedConditiona
 module HobbyCatcher
@@ -12,118 +9,75 @@ module HobbyCatcher
     plugin :halt
     plugin :flash
     plugin :all_verbs # recognizes HTTP verbs beyond GET/POST (e.g., DELETE)
-    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
-    plugin :public, root: 'app/presentation/public'
-    plugin :assets, path: 'app/presentation/assets',
-                    css: 'style.css', js: 'table_row.js'
-
     use Rack::MethodOverride # for other HTTP verbs (with plugin all_verbs
 
     # rubocop:disable Metrics/BlockLength
     route do |routing|
-      routing.assets # load CSS
-      routing.public
+      response['Content-Type'] = 'application/json'
 
       # GET /
       routing.root do
-        # Get cookie viewer's previously seen test history
-        session[:watching] ||= []
-        viewable_hobbies = Views::HobbiesList.new(session[:watching])
-        view 'home', locals: { hobbies: viewable_hobbies }
+        message = "HobbyCatcher API v1 at /api/v1/ in #{App.environment} mode"
+
+        result_response = Representer::HttpResponse.new(
+          Response::ApiResult.new(status: :ok, message: message)
+        )
+
+        response.status = result_response.http_status_code
+        result_response.to_json
       end
 
-      routing.on 'test' do
-        routing.is do
-          routing.post do
-            routing.redirect 'test'
-          end
+      routing.on 'api/v1' do
+        routing.on 'test' do
+          routing.on String do |question_id|
+            # GET api/v1/test
+            routing.get do
+              result = Service::ShowTest.new.call(question_id)
 
-          routing.get do
-            result = Service::ShowTest.new.call
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
 
-            if result.failure?
-              flash[:error] = result.failure
-              routing.redirect '/'
-            else
-              questions = result.value!
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::Test.new(result.value!.message).to_json
             end
-
-            view 'test', locals: { questions: questions }
-          end
-        end
-      end
-
-      routing.on 'history' do
-        routing.post do
-          hobby = routing.params['delete']
-          delete_item = nil
-          session[:watching].each do |item|
-            delete_item = item if item.updated_at.to_s == hobby
-          end
-          session[:watching].delete(delete_item)
-
-          routing.redirect '/history'
-        end
-
-        routing.is do
-          routing.get do
-            # Load previously viewed hobbies
-            result = Service::ListHistories.new.call(session[:watching])
-
-            if result.failure?
-              flash[:error] = result.failure
-              viewable_hobbies = []
-            else
-              hobbies = result.value!
-              flash.now[:notice] = 'Catch your hobby first to see history.' if hobbies.empty?
-
-              viewable_hobbies = Views::HobbiesList.new(hobbies)
-            end
-
-            view 'history', locals: { hobbies: viewable_hobbies }
-          end
-        end
-      end
-
-      routing.on 'suggestion' do
-        routing.is do
-          # POST /introhobby/
-          routing.post do
-            url_request = Forms::AddAnswer.new.call(routing.params)
-
-            if url_request.failure?
-              flash[:error] = 'Seems like you did not answer all of the questions'
-              response.status = 400
-              routing.redirect '/test'
-            end
-
-            answer = [url_request[:type], url_request[:difficulty], url_request[:freetime], url_request[:emotion]]
-            result = Service::GetAnswer.new.call(answer)
-            hobby = result.value!
-
-            # Add new record to watched set in cookies
-            session[:watching].insert(0, hobby.answers).uniq!
-            # Redirect viewer to project page
-            routing.redirect "suggestion/#{hobby.answers.id}"
           end
         end
 
-        routing.on String do |hobby_id|
-          # GET /introhoppy/hoppy
-          routing.get do
-            result = Service::ShowSuggestion.new.call(hobby_id)
-            if result.failure?
-              flash[:error] = result.failure
-              routing.redirect '/'
-            else
-              suggestions = result.value!
+        routing.on 'suggestion' do
+          routing.is do
+            # POST api/v1/suggestion?type=1&difficulty=1&freetime=1&emotion=1
+            routing.post do
+              url_req = Request::AddAnswer.new(routing.params)
+              result = Service::GetAnswer.new.call(url_request: url_req)
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::Hobby.new(result.value!.message.answers).to_json
             end
+          end
 
-            viewable_hobby = Views::Suggestion.new(
-              suggestions[:hobby], suggestions[:categories], suggestions[:courses_intros]
-            )
+          routing.on String do |hobby_id|
+            # GET api/v1/suggestion/{hobby_id}
+            routing.get do
+              result = Service::ShowSuggestion.new.call(hobby_id)
 
-            view 'suggestion', locals: { hobby: viewable_hobby }
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::Suggestion.new(result.value!.message).to_json
+            end
           end
         end
       end

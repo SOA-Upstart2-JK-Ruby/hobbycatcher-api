@@ -37,14 +37,28 @@ module HobbyCatcher
         rebuild_entity(db_course)
       end
 
+      # rubocop:disable Metrics/MethodLength
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
         Entity::Course.new(
-          db_record.to_hash.merge(
-            owncategory: Categories.rebuild_entity(db_record.owncategory)
-          )
+          id:             db_record.id,
+          ud_course_id:   db_record.ud_course_id,
+          title:          db_record.title,
+          url:            db_record.url,
+          image:          db_record.image,
+          ud_category:    db_record.ud_category,
+          price:          db_record.price,
+          rating:         db_record.rating,
+          owncategory_id: db_record.owncategory_id
         )
+      end
+      # rubocop:enable Metrics/MethodLength
+
+      def self.rebuild_many(db_records)
+        db_records.map do |db_course|
+          Courses.rebuild_entity(db_course)
+        end
       end
 
       # Helper class to persist course and its category to database
@@ -64,6 +78,10 @@ module HobbyCatcher
             db_course.update(owncategory: owncategory)
           end
         end
+      end
+
+      def self.db_find_or_create(entity)
+        Database::CourseOrm.find_or_create(entity.to_attr_hash)
       end
     end
   end

@@ -29,12 +29,15 @@ CASSETTES_FOLDER = 'spec/fixtures/cassettes'
 CASSETTE_UD_FILE = 'udemy_api'
 
 # REPLY ANSWERS
-CORRECT_ANSWERS = [1, 2, 1, 1].freeze
-ANIMAL = 'ZEBRA'
+CORRECT_ANSWERS = [0, 1, 1, 1].freeze
+ANIMAL = 'HEDGEHOG'
 
 # SUGGESTION DATA
 HOBBY_ID = 1
 CATEGORY_NAME = 'Dance'
+
+# TEST DATA
+QUESTION_ID = 1
 
 # Helper method for acceptance tests
 # :reek:UtilityFunction

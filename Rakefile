@@ -48,8 +48,14 @@ namespace :db do
   task migrate: :config do
     Sequel.extension :migration
     puts "Migrating #{app.environment} database to latest"
-    puts "Need to run 'HobbyCatcher::InitializeDatabase::Create.load'"
     Sequel::Migrator.run(app.DB, 'app/infrastructure/database/migrations')
+  end
+
+  desc 'Initialize database'
+  task init: :config do
+    require_relative 'app/infrastructure/database/orms/init'
+    HobbyCatcher::InitializeDatabase::Create.load
+    puts "Create data to initialize #{app.environment} database"
   end
 
   desc 'Wipe records from all tables'

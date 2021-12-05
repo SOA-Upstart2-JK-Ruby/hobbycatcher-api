@@ -2,7 +2,7 @@
 
 module HobbyCatcher
   module Repository
-    # Repository for Hobby Entities
+    # Repository for Question Entities
     class Questions
       def self.all
         Database::QuestionOrm.all.map { |db_course| rebuild_entity(db_course) }

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'categories'
-require_relative 'courses'
+# require_relative 'courses'
 
 module HobbyCatcher
   module Repository
@@ -37,7 +37,8 @@ module HobbyCatcher
           name:        db_record.name,
           img:         db_record.img,
           description: db_record.description,
-          user_num:    db_record.user_num
+          user_num:    db_record.user_num,
+          categories:  Categories.rebuild_many(db_record.owned_categories)
         )
       end
 

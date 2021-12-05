@@ -41,14 +41,28 @@ module HobbyCatcher
         rebuild_entity(db_category)
       end
 
+      def self.update_courses(entity)
+        raise 'Courses already exists' unless find(entity).courses.empty?
+
+        db_category = PersistCategory.new(entity).call_for_update
+        rebuild_entity(db_category)
+      end
+
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
         Entity::Category.new(
-          db_record.to_hash.merge(
-            ownhobby: Hobbies.rebuild_entity(db_record.ownhobby)
-          )
+          id:             db_record.id,
+          ud_category_id: db_record.ud_category_id,
+          name:           db_record.name,
+          courses:        db_record.owned_courses
         )
+      end
+
+      def self.rebuild_many(db_records)
+        db_records.map do |db_category|
+          Categories.rebuild_entity(db_category)
+        end
       end
 
       # Helper class to persist category and its hobby to database
@@ -61,12 +75,23 @@ module HobbyCatcher
           Database::CategoryOrm.create(@entity.to_attr_hash)
         end
 
-        def call
-          ownhobby = Hobbies.db_find_or_create(@entity.ownhobby)
+        # def update_category
+        #   Database::CategoryOrm.where(@entity.to_attr_hash)
+        # end
 
+        def call
           create_category.tap do |db_category|
-            db_category.update(ownhobby: ownhobby)
+            @entity.courses.each do |course|
+              db_category.add_course(Courses.db_find_or_create(course))
+            end
           end
+        end
+
+        def call_for_update
+          @entity.courses.map do |course|
+            Courses.db_find_or_create(course)
+          end
+          Database::CategoryOrm.where(@entity.to_attr_hash).first
         end
       end
 
