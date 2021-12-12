@@ -7,7 +7,7 @@
     [1;34m30[0m:   @browser.goto homepage
     [1;34m31[0m: 
     [1;34m32[0m: [1;34m#   # THEN: user should see basic headers, no projects and a welcome message[0m
-    [1;34m33[0m: [1;34m#   _(@browser.h1(id: 'main_header').text).must_equal 'CodePraise'[0m
+    [1;34m33[0m: [1;34m#   _(@browser.h1(id: 'main_header').text).must_equal 'HobbyCatcher'[0m
     [1;34m34[0m: [1;34m#   _(@browser.text_field(id: 'url_input').present?).must_equal true[0m
     [1;34m35[0m: [1;34m#   _(@browser.button(id: 'project_form_submit').present?).must_equal true[0m
     [1;34m36[0m: [1;34m#   _(@browser.table(id: 'projects_table').exists?).must_equal false[0m
@@ -18,10 +18,10 @@
     [1;34m41[0m: 
     [1;34m42[0m: [1;34m# it '(HAPPY) should not see projects they did not request' do[0m
     [1;34m43[0m: [1;34m#   # GIVEN: a project exists in the database but user has not requested it[0m
-    [1;34m44[0m: [1;34m#   project = CodePraise::Github::ProjectMapper[0m
+    [1;34m44[0m: [1;34m#   project = HobbyCatcher::Github::ProjectMapper[0m
     [1;34m45[0m: [1;34m#     .new(GITHUB_TOKEN)[0m
     [1;34m46[0m: [1;34m#     .find(USERNAME, PROJECT_NAME)[0m
-    [1;34m47[0m: [1;34m#   CodePraise::Repository::For.entity(project).create(project)[0m
+    [1;34m47[0m: [1;34m#   HobbyCatcher::Repository::For.entity(project).create(project)[0m
     [1;34m48[0m: 
     [1;34m49[0m: [1;34m#   # WHEN: user goes to the homepage[0m
     [1;34m50[0m: [1;34m#   @browser.goto homepage[0m
