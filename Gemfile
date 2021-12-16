@@ -42,6 +42,11 @@ gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
 gem 'sequel', '~> 5.49'
 
+# Asynchronicity
+gem 'concurrent-ruby', '~> 1.1'
+gem 'aws-sdk-sqs', '~> 1.48'
+gem 'shoryuken', '~> 5.3'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
@@ -58,10 +63,10 @@ group :test do
   gem 'vcr', '~> 6.0'
   gem 'webmock', '~> 3.0'
 
-  gem 'headless', '~> 2.3'
-  gem 'page-object', '~> 2.3'
-  gem 'watir', '~> 7.0'
-  gem 'webdrivers', '~> 5.0'
+  # gem 'headless', '~> 2.3'
+  # gem 'page-object', '~> 2.3'
+  # gem 'watir', '~> 7.0'
+  # gem 'webdrivers', '~> 5.0'
 end
 
 group :development do

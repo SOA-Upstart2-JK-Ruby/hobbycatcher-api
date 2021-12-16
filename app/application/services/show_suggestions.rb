@@ -12,14 +12,20 @@ module HobbyCatcher
       include Dry::Monads[:result]
 
       DB_ERR = 'Having trouble accessing the database'
+      PROCESSING_MSG = 'catching udemy course'
 
       # rubocop:disable Metrics/AbcSize
       def call(input)
         hobby = Repository::Hobbies.find_id(input)
 
         hobby.categories.each do |category|
-          list = Udemy::CategoryMapper.new(App.config.UDEMY_TOKEN).find('subcategory', category.name)
-          Repository::For.entity(list).update_courses(list) if category.courses.empty?
+          # list = Udemy::CategoryMapper.new(App.config.UDEMY_TOKEN).find('subcategory', category.name)
+          # Repository::For.entity(list).update_courses(list) if category.courses.empty?
+          Messaging::Queue
+          .new(App.config.CLONE_QUEUE_URL, App.config)
+          .send(Representer::Category.new(category).to_json)
+
+          Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
         end
         hobby = Repository::Hobbies.find_id(input)
 

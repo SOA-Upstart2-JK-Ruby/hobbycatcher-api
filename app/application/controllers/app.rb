@@ -70,7 +70,6 @@ module HobbyCatcher
             # GET api/v1/suggestion/{hobby_id}
             routing.get do
               response.cache_control public: true, max_age: 300
-              
               result = Service::ShowSuggestion.new.call(hobby_id)
 
               if result.failure?
