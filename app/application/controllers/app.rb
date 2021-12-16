@@ -50,7 +50,7 @@ module HobbyCatcher
 
         routing.on 'suggestion' do
           routing.is do
-            # POST api/v1/suggestion?type=1&difficulty=1&freetime=1&emotion=1
+            # POST api/v1/suggestion?S1
             routing.post do
               url_req = Request::AddAnswer.new(routing.params)
               result = Service::GetAnswer.new.call(url_request: url_req)
@@ -70,7 +70,6 @@ module HobbyCatcher
             # GET api/v1/suggestion/{hobby_id}
             routing.get do
               response.cache_control public: true, max_age: 300
-              
               result = Service::ShowSuggestion.new.call(hobby_id)
 
               if result.failure?
