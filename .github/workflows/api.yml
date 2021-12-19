@@ -40,9 +40,14 @@ jobs:
           DB_FILENAME: ${{ secrets.DB_FILENAME }}
         run: RACK_ENV=test bundle exec rake db:migrate
 
-      - name: Run all specs
+      - name: Create data for test database
         env: # define secrets in Github project -> settings -> secrets
-          UDEMY_TOKEN: ${{ secrets.UDEMY_TOKEN }}
           DB_FILENAME: ${{ secrets.DB_FILENAME }}
-          API_HOST: ${{ secrets.API_HOST }}
-        run: bundle exec rake spec
+        run: RACK_ENV=test bundle exec rake db:init
+
+      # - name: Run all specs
+      #   env: # define secrets in Github project -> settings -> secrets
+      #     UDEMY_TOKEN: ${{ secrets.UDEMY_TOKEN }}
+      #     DB_FILENAME: ${{ secrets.DB_FILENAME }}
+      #     API_HOST: ${{ secrets.API_HOST }}
+      #   run: bundle exec rake spec
