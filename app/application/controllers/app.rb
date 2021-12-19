@@ -32,7 +32,7 @@ module HobbyCatcher
           # GET api/v1/test
           routing.get do
             response.cache_control public: true, max_age: 300
-        
+
             result = Service::ShowTest.new.call
 
             if result.failure?
@@ -42,8 +42,6 @@ module HobbyCatcher
 
             http_response = Representer::HttpResponse.new(result.value!)
             response.status = http_response.http_status_code
-            # result.value!.message.map |result|
-       
             Representer::Test.new(result.value!.message).to_json
           end
         end
@@ -81,6 +79,24 @@ module HobbyCatcher
               response.status = http_response.http_status_code
               Representer::Suggestion.new(result.value!.message).to_json
             end
+          end
+        end
+
+        routing.on 'history' do
+          # GET api/v1/history?list={base64_json_array_of_records}
+          routing.get do
+            # Bug: Search hobby_id
+            list_req = Request::EncodedRecordList.new(routing.params)
+            result = Service::ListHistories.new.call(list_request: list_req)
+
+            if result.failure?
+              failed = Representer::HttpResponse.new(result.failure)
+              routing.halt failed.http_status_code, failed.to_json
+            end
+
+            http_response = Representer::HttpResponse.new(result.value!)
+            response.status = http_response.http_status_code
+            Representer::RecordList.new(result.value!.message).to_json
           end
         end
       end

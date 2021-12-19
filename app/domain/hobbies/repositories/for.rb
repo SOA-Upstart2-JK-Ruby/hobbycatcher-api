@@ -3,6 +3,7 @@
 require_relative 'hobbies'
 require_relative 'categories'
 require_relative 'courses'
+require_relative 'records'
 
 module HobbyCatcher
   module Repository
@@ -11,7 +12,8 @@ module HobbyCatcher
       ENTITY_REPOSITORY = {
         Entity::Hobby => Hobbies,
         Entity::Category => Categories,
-        Entity::Course => Courses
+        Entity::Course => Courses,
+        Entity::Record => Records
       }.freeze
 
       def self.klass(entity_klass)

@@ -28,3 +28,6 @@ Layout/HashAlignment:
 Lint/MissingSuper:
   Exclude:
     - '**/*.rb'
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true

@@ -18,6 +18,7 @@ module HobbyCatcher
 
       def to_hobby(animal)
         hobby = HobbyCatcher::Database::HobbyOrm.find(name: animal.upcase)
+        HobbyCatcher::Database::RecordOrm.create(hobby_id: hobby.id)
         hobby.update(user_num: hobby.user_num + 1)
       end
     end
