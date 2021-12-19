@@ -13,7 +13,8 @@ module HobbyCatcher
       end
 
       def course(field, keyword)
-        Request.new(@udemy_token).path("?#{field}=#{keyword.gsub(/[ &]/, ' ' => '%20', '&' => '%26')}&fields[course]=#{FIELDS}").parse
+        keyword = keyword.gsub(/[ &]/, ' ' => '%20', '&' => '%26')
+        Request.new(@udemy_token).path("?#{field}=#{keyword}&fields[course]=#{FIELDS}").parse
       end
 
       # Sends out HTTP requests

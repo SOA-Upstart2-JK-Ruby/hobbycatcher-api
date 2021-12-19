@@ -5,6 +5,7 @@ require 'set'
 require_relative '../../helpers/spec_helper'
 require_relative '../../helpers/vcr_helper'
 require_relative '../../helpers/database_helper'
+require 'rack/test'
 
 describe 'Tests Udemy API library' do
   VCR.configure do |c|
@@ -19,7 +20,7 @@ describe 'Tests Udemy API library' do
     VCR.insert_cassette CASSETTE_UD_FILE,
                         record:            :new_episodes,
                         match_requests_on: %i[method uri headers]
-    @courses = HobbyCatcher::Udemy::CourseMapper.new(UDEMY_TOKEN).find(FIELD, KEYWORD)
+    @category = HobbyCatcher::Udemy::CategoryMapper.new(UDEMY_TOKEN).find(FIELD, KEYWORD)
   end
 
   after do
@@ -28,7 +29,7 @@ describe 'Tests Udemy API library' do
 
   describe 'Course API' do
     it 'HAPPY: should provide courses' do
-      _(@courses).wont_be_nil
+      _(@category.courses).wont_be_nil
     end
 
     # it 'SAD: should raise exception on incorrect course' do
@@ -39,15 +40,15 @@ describe 'Tests Udemy API library' do
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
-        HobbyCatcher::Udemy::CourseMapper.new('WrongToken')
-                                            .find(FIELD, KEYWORD)
+        HobbyCatcher::Udemy::CategoryMapper.new('WrongToken').find(FIELD, KEYWORD)
       end).must_raise HobbyCatcher::Udemy::Api::Response::Forbidden
     end
   end
 
   describe 'Course Infomation' do
     it 'HAPPY: should provide correct course attributes' do
-      courses = @courses
+      # 5.times { sleep(1) and print('.') }
+      courses = @category.courses
 
       _(courses.count).must_equal CORRECT_UD.count
 
