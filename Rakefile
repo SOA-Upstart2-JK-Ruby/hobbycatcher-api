@@ -18,12 +18,7 @@ task :respec do
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
-# NOTE: run `rake run:test` in another process
-# desc 'Run acceptance tests'
-# Rake::TestTask.new(:spec_accept) do |t|
-#   t.pattern = 'spec/tests/acceptance/*_spec.rb'
-#   t.warning = false
-# end
+# rubocop:disable Style/HashSyntax
 
 desc 'Keep restarting web app upon changes'
 task :rerack do
@@ -115,8 +110,8 @@ end
 
 namespace :cache do
   task :config do
-    require_relative 'config/environment.rb' # load config info
-    require_relative 'app/infrastructure/cache/init.rb' # load cache client
+    require_relative 'config/environment' # load config info
+    require_relative 'app/infrastructure/cache/init' # load cache client
     @api = HobbyCatcher::App
   end
 
@@ -163,9 +158,9 @@ namespace :queues do
     require_relative 'config/environment' # load config info
     @api = HobbyCatcher::App
     @sqs = Aws::SQS::Client.new(
-      access_key_id: @api.config.AWS_ACCESS_KEY_ID,
+      access_key_id:     @api.config.AWS_ACCESS_KEY_ID,
       secret_access_key: @api.config.AWS_SECRET_ACCESS_KEY,
-      region: @api.config.AWS_REGION
+      region:            @api.config.AWS_REGION
     )
     @q_name = @api.config.CLONE_QUEUE
     @q_url = @sqs.get_queue_url(queue_name: @q_name).queue_url
@@ -258,3 +253,4 @@ namespace :quality do
     sh "flog -m #{only_app}"
   end
 end
+# rubocop:enable Style/HashSyntax

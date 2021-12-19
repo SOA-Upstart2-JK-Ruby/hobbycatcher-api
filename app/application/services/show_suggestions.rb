@@ -21,9 +21,8 @@ module HobbyCatcher
         hobby.categories.each do |category|
           # list = Udemy::CategoryMapper.new(App.config.UDEMY_TOKEN).find('subcategory', category.name)
           # Repository::For.entity(list).update_courses(list) if category.courses.empty?
-          Messaging::Queue
-          .new(App.config.CLONE_QUEUE_URL, App.config)
-          .send(Representer::Category.new(category).to_json)
+
+          Messaging::Queue.new(App.config.CLONE_QUEUE_URL, App.config).send(Representer::Category.new(category).to_json)
 
           Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
         end

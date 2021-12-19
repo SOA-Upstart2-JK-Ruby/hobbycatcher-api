@@ -26,8 +26,9 @@ describe 'Show Test Service Test' do
       # hobby = HobbyCatcher::Mapper::HobbySuggestions.new(CORRECT_ANSWERS).build_entity
 
       # WHEN: we request all watched test
-      result = HobbyCatcher::Service::GetAnswer.new.call(CORRECT_ANSWERS)
+      suggestion = HobbyCatcher::Mapper::HobbySuggestions.new(CORRECT_ANSWERS).build_entity
 
+      result = HobbyCatcher::Service::GetAnswer.new.call(suggestion)
       # THEN: we should see our hobby in the resulting list
       _(result.success?).must_equal true
       # tests = result.value!
