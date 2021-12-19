@@ -13,7 +13,7 @@ module HobbyCatcher
 
       def find(field, keyword)
         data = @gateway.course(field, keyword)
-        build_entity(data)
+        DataMapper.new(data).build_entity
       end
 
       def self.build_entity(data)

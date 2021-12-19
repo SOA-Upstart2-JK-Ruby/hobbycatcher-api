@@ -18,6 +18,7 @@ describe 'Test TEST reply and work correctly' do
 
   it 'HAPPY: should get hobby suggesstions from answers' do
     suggestion = HobbyCatcher::Mapper::HobbySuggestions.new(CORRECT_ANSWERS).build_entity
+
     _(suggestion).wont_be_nil
     _(suggestion.class).must_equal HobbyCatcher::Entity::HobbySuggestions
 

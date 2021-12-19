@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/init.rb": {
+      "/home/ruby/hobbycatcher-api/init.rb": {
         "lines": [
           null,
           null,
@@ -10,14 +10,14 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/config/init.rb": {
+      "/home/ruby/hobbycatcher-api/config/init.rb": {
         "lines": [
           null,
           null,
           1
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/config/environment.rb": {
+      "/home/ruby/hobbycatcher-api/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -30,29 +30,39 @@
           1,
           1,
           null,
-          1,
-          null,
-          1,
-          1,
           null,
           null,
           1,
           null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
           1,
           1,
           null,
           null,
           1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
           0,
           null,
           null,
@@ -60,14 +70,6 @@
           null,
           null,
           1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
           0,
           0,
           0,
@@ -77,11 +79,12 @@
           1,
           null,
           1,
+          null,
           null,
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/init.rb": {
         "lines": [
           null,
           null,
@@ -90,7 +93,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/init.rb": {
         "lines": [
           null,
           null,
@@ -100,7 +103,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/init.rb": {
         "lines": [
           null,
           null,
@@ -112,7 +115,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/entities/category.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/entities/category.rb": {
         "lines": [
           null,
           null,
@@ -140,7 +143,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/entities/course.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/entities/course.rb": {
         "lines": [
           null,
           null,
@@ -171,7 +174,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/entities/hobby.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/entities/hobby.rb": {
         "lines": [
           null,
           null,
@@ -202,7 +205,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/repositories/categories.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/repositories/categories.rb": {
         "lines": [
           null,
           null,
@@ -255,14 +258,87 @@
           null,
           null,
           1,
-          4,
+          8,
           null,
-          4,
-          null,
-          null,
+          8,
           null,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          7,
+          7,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/repositories/courses.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          0,
+          0,
           null,
           null,
           1,
@@ -270,205 +346,132 @@
           3,
           null,
           null,
-          null,
-          null,
           1,
-          1,
-          0,
+          2,
           null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
+          2,
           0,
           null,
           null,
           null,
           1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/repositories/courses.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/repositories/for.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/repositories/hobbies.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          5,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          5,
-          null,
           3,
           null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          2,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/repositories/for.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/repositories/hobbies.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          9,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          9,
+          null,
+          7,
+          null,
           null,
           null,
           null,
@@ -485,7 +488,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/mappers/category_mapper.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/mappers/category_mapper.rb": {
         "lines": [
           null,
           null,
@@ -497,51 +500,51 @@
           null,
           1,
           1,
-          0,
-          0,
-          0,
+          6,
+          6,
+          6,
           null,
           null,
           1,
-          0,
-          0,
+          6,
+          5,
           null,
           null,
           1,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
+          5,
           null,
           null,
           null,
           1,
-          null,
           1,
-          0,
-          null,
-          null,
-          1,
-          0,
+          5,
+          5,
+          5,
+          5,
           null,
           null,
           1,
-          0,
-          0,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          5,
+          60,
           null,
           null,
           null,
@@ -550,7 +553,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/mappers/course_mapper.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/mappers/course_mapper.rb": {
         "lines": [
           null,
           null,
@@ -560,60 +563,8 @@
           null,
           1,
           1,
-          5,
-          5,
-          5,
-          null,
-          null,
-          1,
-          5,
-          5,
-          null,
-          null,
-          1,
           0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
           0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
           0,
           null,
           null,
@@ -623,11 +574,63 @@
           null,
           null,
           1,
-          0,
+          60,
+          null,
+          null,
           null,
           null,
           1,
-          0,
+          1,
+          60,
+          null,
+          null,
+          1,
+          60,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          60,
+          null,
+          null,
+          1,
+          60,
+          null,
+          null,
+          1,
+          60,
+          null,
+          null,
+          1,
+          60,
+          null,
+          null,
+          1,
+          60,
+          null,
+          null,
+          1,
+          60,
+          60,
+          null,
+          null,
+          1,
+          120,
+          null,
+          null,
+          1,
+          60,
           null,
           null,
           null,
@@ -636,7 +639,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/hobbies/mappers/hobby_mapper.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/hobbies/mappers/hobby_mapper.rb": {
         "lines": [
           null,
           null,
@@ -702,7 +705,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/suggestions/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/suggestions/init.rb": {
         "lines": [
           null,
           null,
@@ -714,7 +717,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/suggestions/values/personality_trait.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/suggestions/values/personality_trait.rb": {
         "lines": [
           null,
           null,
@@ -728,15 +731,15 @@
           null,
           1,
           null,
-          2,
-          2,
-          2,
-          2,
-          2,
+          3,
+          3,
+          3,
+          3,
+          3,
           null,
           null,
           1,
-          2,
+          3,
           1,
           null,
           1,
@@ -746,7 +749,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/suggestions/entities/hobby_suggestions.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/suggestions/entities/hobby_suggestions.rb": {
         "lines": [
           null,
           null,
@@ -759,11 +762,11 @@
           1,
           null,
           1,
-          2,
+          3,
           null,
           null,
           1,
-          2,
+          3,
           null,
           null,
           1,
@@ -775,7 +778,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/suggestions/mappers/hobby_suggestions_mapper.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/suggestions/mappers/hobby_suggestions_mapper.rb": {
         "lines": [
           null,
           null,
@@ -787,11 +790,11 @@
           null,
           1,
           null,
-          2,
+          3,
           null,
           null,
           1,
-          2,
+          3,
           null,
           null,
           null,
@@ -800,7 +803,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/questions/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/questions/init.rb": {
         "lines": [
           null,
           null,
@@ -812,7 +815,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/questions/entities/question.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/questions/entities/question.rb": {
         "lines": [
           null,
           null,
@@ -839,7 +842,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/domain/questions/repositories/questions.rb": {
+      "/home/ruby/hobbycatcher-api/app/domain/questions/repositories/questions.rb": {
         "lines": [
           null,
           null,
@@ -879,7 +882,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/init.rb": {
         "lines": [
           null,
           null,
@@ -889,7 +892,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/gateways/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/gateways/init.rb": {
         "lines": [
           null,
           null,
@@ -898,7 +901,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/gateways/udemy_api.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/gateways/udemy_api.rb": {
         "lines": [
           null,
           null,
@@ -911,41 +914,41 @@
           1,
           1,
           1,
-          5,
+          6,
           null,
           null,
           1,
-          5,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          null,
-          null,
-          null,
-          5,
-          5,
-          null,
-          null,
+          6,
           null,
           null,
           null,
           1,
           1,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
           1,
           1,
           null,
@@ -956,11 +959,11 @@
           null,
           null,
           1,
-          5,
+          6,
           null,
           null,
           1,
-          0,
+          1,
           null,
           null,
           null,
@@ -968,7 +971,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/database/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/database/init.rb": {
         "lines": [
           null,
           null,
@@ -978,7 +981,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/database/orms/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/database/orms/init.rb": {
         "lines": [
           null,
           null,
@@ -987,7 +990,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/database/orms/category_orm.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/database/orms/category_orm.rb": {
         "lines": [
           null,
           null,
@@ -1014,7 +1017,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/database/orms/course_orm.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/database/orms/course_orm.rb": {
         "lines": [
           null,
           null,
@@ -1037,7 +1040,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/database/orms/hobby_orm.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/database/orms/hobby_orm.rb": {
         "lines": [
           null,
           null,
@@ -1061,7 +1064,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/database/orms/initialize_database.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/database/orms/initialize_database.rb": {
         "lines": [
           null,
           null,
@@ -1091,7 +1094,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/database/orms/question_orm.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/database/orms/question_orm.rb": {
         "lines": [
           null,
           null,
@@ -1110,42 +1113,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/cache/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          2,
-          null
-        ]
-      },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/cache/redis_cache.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/messaging/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/cache/init.rb": {
         "lines": [
           null,
           null,
@@ -1154,7 +1122,42 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/infrastructure/messaging/queue.rb": {
+      "/home/ruby/hobbycatcher-api/app/infrastructure/cache/redis_cache.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ruby/hobbycatcher-api/app/infrastructure/messaging/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/home/ruby/hobbycatcher-api/app/infrastructure/messaging/queue.rb": {
         "lines": [
           null,
           null,
@@ -1168,13 +1171,13 @@
           1,
           null,
           1,
-          2,
-          2,
+          3,
+          3,
           null,
           null,
           null,
           null,
-          0,
+          3,
           null,
           null,
           null,
@@ -1182,7 +1185,7 @@
           null,
           null,
           1,
-          0,
+          3,
           null,
           null,
           null,
@@ -1200,7 +1203,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/init.rb": {
         "lines": [
           null,
           null,
@@ -1210,7 +1213,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/requests/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/requests/init.rb": {
         "lines": [
           null,
           null,
@@ -1219,7 +1222,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/requests/add_answer.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/requests/add_answer.rb": {
         "lines": [
           null,
           null,
@@ -1254,7 +1257,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/services/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/services/init.rb": {
         "lines": [
           null,
           null,
@@ -1263,7 +1266,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/services/get_answer.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/services/get_answer.rb": {
         "lines": [
           null,
           null,
@@ -1285,7 +1288,7 @@
           null,
           null,
           1,
-          2,
+          1,
           1,
           1,
           null,
@@ -1306,7 +1309,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/services/list_histories.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/services/list_histories.rb": {
         "lines": [
           null,
           null,
@@ -1332,7 +1335,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/services/show_suggestions.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/services/show_suggestions.rb": {
         "lines": [
           null,
           null,
@@ -1352,22 +1355,21 @@
           null,
           null,
           1,
-          4,
+          5,
           null,
-          4,
+          5,
           null,
+          null,
+          null,
+          3,
+          null,
+          3,
+          null,
+          3,
+          null,
+          3,
           null,
           2,
-          null,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          4,
           null,
           null,
           null,
@@ -1375,7 +1377,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/services/show_test.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/services/show_test.rb": {
         "lines": [
           null,
           null,
@@ -1399,7 +1401,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/controllers/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/controllers/init.rb": {
         "lines": [
           null,
           null,
@@ -1408,7 +1410,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/application/controllers/app.rb": {
+      "/home/ruby/hobbycatcher-api/app/application/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -1425,26 +1427,46 @@
           null,
           null,
           1,
+          5,
+          null,
+          null,
+          5,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          5,
+          5,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          4,
           4,
           null,
-          null,
-          4,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          4,
-          4,
-          null,
           1,
           1,
-          null,
           1,
           null,
           1,
@@ -1454,44 +1476,24 @@
           null,
           1,
           1,
-          null,
-          null,
           1,
           null,
           null,
           null,
           3,
+          null,
+          3,
+          3,
           3,
           null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
+          3,
           1,
           1,
           null,
           null,
-          null,
-          2,
-          null,
           2,
           2,
           2,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          0,
-          0,
           null,
           null,
           null,
@@ -1502,7 +1504,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/init.rb": {
         "lines": [
           null,
           null,
@@ -1512,7 +1514,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/responses/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/responses/init.rb": {
         "lines": [
           null,
           null,
@@ -1521,7 +1523,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/responses/api_result.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/responses/api_result.rb": {
         "lines": [
           null,
           null,
@@ -1541,16 +1543,16 @@
           null,
           1,
           1,
-          11,
+          15,
           null,
-          10,
+          14,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/init.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/init.rb": {
         "lines": [
           null,
           null,
@@ -1559,7 +1561,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/category_representer.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/category_representer.rb": {
         "lines": [
           null,
           null,
@@ -1580,7 +1582,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/course_representer.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/course_representer.rb": {
         "lines": [
           null,
           null,
@@ -1620,7 +1622,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/hobby_representer.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/hobby_representer.rb": {
         "lines": [
           null,
           null,
@@ -1655,7 +1657,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/http_response_representer.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/http_response_representer.rb": {
         "lines": [
           null,
           null,
@@ -1687,14 +1689,14 @@
           null,
           null,
           1,
-          4,
+          5,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/question_representer.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/question_representer.rb": {
         "lines": [
           null,
           null,
@@ -1715,7 +1717,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/suggestion_representers.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/suggestion_representers.rb": {
         "lines": [
           null,
           null,
@@ -1739,14 +1741,13 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/app/presentation/representers/test_representer.rb": {
+      "/home/ruby/hobbycatcher-api/app/presentation/representers/test_representer.rb": {
         "lines": [
           null,
           null,
           1,
           1,
           1,
-          null,
           null,
           1,
           1,
@@ -1773,7 +1774,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/helpers/vcr_helper.rb": {
+      "/home/ruby/hobbycatcher-api/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -1796,11 +1797,11 @@
           null,
           null,
           1,
-          12,
-          228,
-          228,
+          11,
+          272,
+          272,
           null,
-          12,
+          11,
           null,
           null,
           null,
@@ -1808,12 +1809,12 @@
           null,
           null,
           1,
-          12,
+          11,
           null,
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/helpers/database_helper.rb": {
+      "/home/ruby/hobbycatcher-api/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -1822,44 +1823,14 @@
           1,
           1,
           null,
-          12,
-          12,
-          12,
+          11,
+          11,
+          11,
           null,
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/integration/layers/domain_suggestions_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/integration/layers/gateway_database_spec.rb": {
+      "/home/ruby/hobbycatcher-api/spec/tests/integration/layers/domain_suggestions_spec.rb": {
         "lines": [
           null,
           null,
@@ -1872,23 +1843,54 @@
           null,
           1,
           1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
           1,
           null,
           null,
           1,
           1,
           null,
+          null,
+          1,
+          1,
           null,
           0,
           0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/ruby/hobbycatcher-api/spec/tests/integration/layers/gateway_database_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
           0,
           0,
           0,
@@ -1902,7 +1904,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/integration/services/get_answer_spec.rb": {
+      "/home/ruby/hobbycatcher-api/spec/tests/integration/services/get_answer_spec.rb": {
         "lines": [
           null,
           null,
@@ -1934,6 +1936,7 @@
           null,
           1,
           null,
+          0,
           null,
           0,
           null,
@@ -1943,7 +1946,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/integration/services/list_histories_spec.rb": {
+      "/home/ruby/hobbycatcher-api/spec/tests/integration/services/list_histories_spec.rb": {
         "lines": [
           null,
           null,
@@ -2002,7 +2005,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/integration/services/show_suggestions_spec.rb": {
+      "/home/ruby/hobbycatcher-api/spec/tests/integration/services/show_suggestions_spec.rb": {
         "lines": [
           null,
           null,
@@ -2033,10 +2036,13 @@
           null,
           1,
           1,
-          0,
-          0,
-          0,
-          0,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           0,
           null,
@@ -2055,7 +2061,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/integration/services/show_test_spec.rb": {
+      "/home/ruby/hobbycatcher-api/spec/tests/integration/services/show_test_spec.rb": {
         "lines": [
           null,
           null,
@@ -2096,7 +2102,7 @@
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/unit/gateway_udemy_spec.rb": {
+      "/home/ruby/hobbycatcher-api/spec/tests/unit/gateway_udemy_spec.rb": {
         "lines": [
           null,
           null,
@@ -2105,99 +2111,100 @@
           1,
           1,
           1,
+          1,
           null,
           1,
           1,
           1,
           1,
           null,
-          55,
-          55,
-          null,
-          null,
-          1,
-          3,
-          null,
-          null,
-          3,
+          46,
+          46,
           null,
           null,
           1,
           3,
           null,
           null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          3,
           null,
           null,
           1,
-          0,
-          0,
-          null,
-          null,
-          null,
+          3,
           null,
           null,
           1,
           1,
-          0,
-          null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
-          null,
-          0,
           null,
           null,
-          0,
-          0,
-          null,
-          0,
           null,
           null,
-          0,
-          0,
-          null,
-          0,
           null,
           null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
+          1,
+          1,
+          1,
           null,
           null,
-          0,
-          0,
-          null,
-          0,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/karenchiu/Documents/GitHub/hobbycatcher-api/spec/tests/unit/result_spec.rb": {
+      "/home/ruby/hobbycatcher-api/spec/tests/unit/result_spec.rb": {
         "lines": [
           null,
           null,
@@ -2227,6 +2234,6 @@
         ]
       }
     },
-    "timestamp": 1639728239
+    "timestamp": 1639892561
   }
 }
