@@ -32,7 +32,7 @@ module HobbyCatcher
           # GET api/v1/test
           routing.get do
             response.cache_control public: true, max_age: 300
-        
+
             result = Service::ShowTest.new.call
 
             if result.failure?

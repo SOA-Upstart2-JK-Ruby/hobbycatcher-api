@@ -22,7 +22,7 @@ module HobbyCatcher
       rescue StandardError
         Failure(
           Response::ApiResult.new(
-            status: :bad_request,
+            status:  :bad_request,
             message: 'Record list not found'
           )
         )

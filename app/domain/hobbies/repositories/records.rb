@@ -24,9 +24,9 @@ module HobbyCatcher
         return nil unless db_record
 
         Entity::Record.new(
-          id:          db_record.id,
-          hobby_id:    Hobbies.find_id(db_record.hobby_id),
-          updated_at:  db_record.updated_at,
+          id:         db_record.id,
+          hobby_id:   Hobbies.find_id(db_record.hobby_id),
+          updated_at: db_record.updated_at
         )
       end
 
