@@ -25,7 +25,6 @@ class CoursesGetWorker
   shoryuken_options queue: config.CLONE_QUEUE_URL, auto_delete: true
 
   def perform(_sqs_msg, request)
-   # binding.pry
     data = HobbyCatcher::Representer::Category.new(OpenStruct.new).from_json(request)
     list = HobbyCatcher::Udemy::CategoryMapper.new(HobbyCatcher::App.config.UDEMY_TOKEN).find('subcategory',data.name)
 
