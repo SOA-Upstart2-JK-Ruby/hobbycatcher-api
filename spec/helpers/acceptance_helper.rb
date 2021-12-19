@@ -2,8 +2,9 @@
 
 ENV['RACK_ENV'] = 'app_test'
 
-# require 'headless'
+require 'headless'
 require 'webdrivers/chromedriver'
+require 'webdrivers'
 require 'watir'
 require 'page-object'
 

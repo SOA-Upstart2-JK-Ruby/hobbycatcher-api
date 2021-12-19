@@ -47,7 +47,7 @@ module HobbyCatcher
     configure :app_test do
       require_relative '../spec/helpers/vcr_helper'
       VcrHelper.setup_vcr
-      VcrHelper.configure_vcr_for_github(recording: :none)
+      VcrHelper.configure_vcr_for_udemy(recording: :none)
     end
 
     # Database Setup

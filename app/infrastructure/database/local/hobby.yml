@@ -1,65 +1,65 @@
 ---
 - name: LION
-  img: JPG
+  img: lion.jpg
   description: You’re a LION! You are optimistic and adventurous, and you like to complete tasks in one go. It’s time to start a wonderful journey!
   user_num: 0
 - name: GIRAFFE
-  img: JPG
+  img: giraffe.jpg
   description: You’re a GIRAFFE! You are optimistic and adventurous, and you like to complete tasks in one go, maybe it’s time to relax and chill.
   user_num: 0
 - name: DOG
-  img: JPG
+  img: dog.jpg
   description: You’re a DOG! You are optimistic and adventurous, and you like to complete tasks in your own pace. You are looking forward to starting a wonderful journey.
   user_num: 0
 - name: ZEBRA
-  img: JPG
+  img: zebra.jpg
   description: You’re a ZEBRA! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. How about starting an amazing adventure now!
   user_num: 0
 - name: GOAT
-  img: JPG
+  img: goat.jpg
   description: You’re a GOAT! You are adventurous but feel low at times. When facing tasks, you may want to complete them in one go. How about starting an amazing adventure now!
   user_num: 0
 - name: RABBIT
-  img: JPG
+  img: rabbit.jpg
   description: You’re a RABBIT! You are optimistic and adventurous, and you like to complete tasks in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
 - name: ELEPHANT
-  img: JPG
+  img: elephant.jpg
   description: You’re an ELEPHANT! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. Sometimes you just want to relax and chill.
   user_num: 0
 - name: RACOON
-  img: JPG
+  img: racoon.jpg
   description: You’re a RACOON! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. How about starting an amazing adventure now!
   user_num: 0
 - name: CAT
-  img: JPG
+  img: cat.jpg
   description: You’re a CAT! You are adventurous but feel low at times. When facing tasks, you may want to complete them in one go. Sometimes you just want to relax and chill.
   user_num: 0
 - name: OWL
-  img: JPG
+  img: owl.jpg
   description: You’re an OWL! You are adventurous but feel low at times. When facing tasks, you may want to complete them in a steady pace. You are looking forward to starting a wonderful journey.
   user_num: 0
 - name: KOALA
-  img: JPG
+  img: koala.jpg
   description: You’re a KOALA! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. It’s time to start a wonderful journey!
   user_num: 0
 - name: HEDGEHOG
-  img: JPG
+  img: hedgehog.jpg
   description: You’re a HEDGEHOG! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. It’s time to start a wonderful journey!
   user_num: 0
 - name: TURTLE
-  img: JPG
+  img: tutle.jpg
   description: You’re a TURTLE! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. Sometimes you just want to relax and chill.
   user_num: 0
 - name: CROCODILE
-  img: JPG
+  img: crocodile.jpg
   description: You’re a CROCODILE! You are adventurous but feel low at times. When facing tasks, you may want to complete them in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
 - name: PANDA
-  img: JPG
+  img: panda.jpg
   description: You’re a PANDA! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
 - name: HIPPO
-  img: JPG
+  img: hippo.jpg
   description: You’re a HIPPO! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
