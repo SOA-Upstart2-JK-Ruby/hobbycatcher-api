@@ -1,65 +1,65 @@
 ---
 - name: LION
-  img: JPG
+  img: https://i.postimg.cc/4Npsd31D/pexels-pixabay-357209.jpg
   description: You’re a LION! You are optimistic and adventurous, and you like to complete tasks in one go. It’s time to start a wonderful journey!
   user_num: 0
 - name: GIRAFFE
-  img: JPG
+  img: https://i.postimg.cc/pXJ445CL/pexels-rachel-claire-4577789.jpg
   description: You’re a GIRAFFE! You are optimistic and adventurous, and you like to complete tasks in one go, maybe it’s time to relax and chill.
   user_num: 0
 - name: DOG
-  img: JPG
+  img: https://i.postimg.cc/pLgfBqjh/pexels-helena-lopes-2253275.jpg
   description: You’re a DOG! You are optimistic and adventurous, and you like to complete tasks in your own pace. You are looking forward to starting a wonderful journey.
   user_num: 0
 - name: ZEBRA
-  img: JPG
+  img: https://i.postimg.cc/HLzLLLTY/pexels-adriaan-greyling-750539.jpg
   description: You’re a ZEBRA! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. How about starting an amazing adventure now!
   user_num: 0
 - name: GOAT
-  img: JPG
+  img: https://i.postimg.cc/59T2yTWC/pexels-maksim-romashkin-6152104.jpg
   description: You’re a GOAT! You are adventurous but feel low at times. When facing tasks, you may want to complete them in one go. How about starting an amazing adventure now!
   user_num: 0
 - name: RABBIT
-  img: JPG
+  img: https://i.postimg.cc/fbzw1hm6/pexels-anna-shvets-4588074.jpg
   description: You’re a RABBIT! You are optimistic and adventurous, and you like to complete tasks in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
 - name: ELEPHANT
-  img: JPG
+  img: https://i.postimg.cc/cH6d4MDh/pexels-antony-trivet-6057173.jpg
   description: You’re an ELEPHANT! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. Sometimes you just want to relax and chill.
   user_num: 0
 - name: RACOON
-  img: JPG
+  img: https://i.postimg.cc/G38sXkcv/pexels-anne-sch-634255.jpg
   description: You’re a RACOON! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. How about starting an amazing adventure now!
   user_num: 0
 - name: CAT
-  img: JPG
+  img: https://i.postimg.cc/g2dXcQ3K/pexels-karina-badura-6982643.jpg
   description: You’re a CAT! You are adventurous but feel low at times. When facing tasks, you may want to complete them in one go. Sometimes you just want to relax and chill.
   user_num: 0
 - name: OWL
-  img: JPG
+  img: https://i.postimg.cc/D0L0nPZD/pexels-erik-karits-3737300.jpg
   description: You’re an OWL! You are adventurous but feel low at times. When facing tasks, you may want to complete them in a steady pace. You are looking forward to starting a wonderful journey.
   user_num: 0
 - name: KOALA
-  img: JPG
+  img: https://i.postimg.cc/K8JzGzGZ/pexels-valeriia-miller-2610309.jpg
   description: You’re a KOALA! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. It’s time to start a wonderful journey!
   user_num: 0
 - name: HEDGEHOG
-  img: JPG
+  img: https://i.postimg.cc/c1wLKTxk/pexels-pixabay-50577.jpg
   description: You’re a HEDGEHOG! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. It’s time to start a wonderful journey!
   user_num: 0
 - name: TURTLE
-  img: JPG
+  img: https://i.postimg.cc/CLwSRg6d/pexels-pixabay-162307.jpg
   description: You’re a TURTLE! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in one go. Sometimes you just want to relax and chill.
   user_num: 0
 - name: CROCODILE
-  img: JPG
+  img: https://i.postimg.cc/d1MKwPys/pexels-pixabay-60644.jpg
   description: You’re a CROCODILE! You are adventurous but feel low at times. When facing tasks, you may want to complete them in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
 - name: PANDA
-  img: JPG
+  img: https://i.postimg.cc/Sx5BfFV6/pexels-laura-the-explaura-3608263.jpg
   description: You’re a PANDA! You are optimistic and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
 - name: HIPPO
-  img: JPG
+  img: https://i.postimg.cc/85bX3qdn/pexels-min-an-1131460.jpg
   description: You’re a HIPPO! You feel low at times and you prefer to live a stable life. When facing tasks, you may want to complete them in a steady pace. Sometimes you just want to relax and chill.
   user_num: 0
