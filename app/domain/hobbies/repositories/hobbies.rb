@@ -38,6 +38,7 @@ module HobbyCatcher
           img:         db_record.img,
           description: db_record.description,
           user_num:    db_record.user_num,
+          updated_at:  db_record.updated_at,
           categories:  Categories.rebuild_many(db_record.owned_categories)
         )
       end

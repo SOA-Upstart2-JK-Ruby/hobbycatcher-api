@@ -16,6 +16,7 @@ module HobbyCatcher
       property :img
       property :description
       property :user_num
+      property :updated_at
 
       link :self do
         "#{App.config.API_HOST}/api/v1/suggestion/#{hobby_id}"

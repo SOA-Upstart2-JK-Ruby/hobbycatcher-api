@@ -17,6 +17,7 @@ module HobbyCatcher
       attribute :ud_category,     Strict::String
       attribute :price,           Strict::String
       attribute :rating,          Strict::Float
+      attribute :video_length,    Strict::Integer
       attribute :owncategory_id,  Strict::Integer
 
       def to_attr_hash

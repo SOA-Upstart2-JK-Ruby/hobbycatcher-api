@@ -15,6 +15,7 @@ Sequel.migration do
       String   :ud_category, null: false
       String   :price
       Float    :rating
+      Integer  :video_length
 
       DateTime :created_at
       DateTime :updated_at
