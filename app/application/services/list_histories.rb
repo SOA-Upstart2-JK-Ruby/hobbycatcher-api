@@ -27,7 +27,7 @@ module HobbyCatcher
       end
 
       def retrieve_records(input)
-        Repository::For.klass(Entity::Record).find_ids(input[:list])
+        Repository::For.klass(Entity::Record).find_records(input[:list])
           .then { |records| Response::RecordsList.new(records) }
           .then { |list| Response::ApiResult.new(status: :ok, message: list) }
           .then { |result| Success(result) }
