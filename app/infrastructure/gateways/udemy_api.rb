@@ -7,7 +7,7 @@ module HobbyCatcher
   module Udemy
     # Library for Udemy API
     class Api
-      FIELDS = 'avg_rating,primary_subcategory,image_240x135,price,title,url,id'
+      FIELDS = 'avg_rating,primary_subcategory,image_240x135,price,title,url,id,content_length_video'
       def initialize(token)
         @udemy_token = token
       end

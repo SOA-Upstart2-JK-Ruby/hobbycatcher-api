@@ -32,3 +32,33 @@
 - ud_category_id: 230
   name: Yoga
   ownhobby_id: 8
+- ud_category_id: 557
+  name: Esoteric Practices
+  ownhobby_id: 9
+- ud_category_id: 222
+  name: Fitness
+  ownhobby_id: 10
+- ud_category_id: 192
+  name: Pet Care & Training
+  ownhobby_id: 11
+- ud_category_id: 242
+  name: Meditation
+  ownhobby_id: 12
+- ud_category_id: 182
+  name: Food & Beverage
+  ownhobby_id: 13
+- ud_category_id: 188
+  name: Gaming
+  ownhobby_id: 14
+- ud_category_id: 164
+  name: Creativity
+  ownhobby_id: 15
+- ud_category_id: 228
+  name: Nutrition & Diet
+  ownhobby_id: 15
+- ud_category_id: 232
+  name: Mental Health
+  ownhobby_id: 16
+- ud_category_id: 170
+  name: Stress Management
+  ownhobby_id: 16

@@ -17,6 +17,7 @@ module HobbyCatcher
       property :price
       property :title
       property :rating
+      property :video_length
 
       # link :self do
       #     "#{App.config.API_HOST}/api/v1/projects/#{project_name}/#{owner_name}"
