@@ -14,7 +14,9 @@ module HobbyCatcher
 
       def course(field, keyword)
         keyword = keyword.gsub(/[ &]/, ' ' => '%20', '&' => '%26')
-        Request.new(@udemy_token).path("?#{field}=#{keyword}&fields[course]=#{FIELDS}").parse
+        binding.pry
+        Request.new(@udemy_token).path("?page_size=30&#{field}=#{keyword}&fields[course]=#{FIELDS}").parse
+        
       end
 
       # Sends out HTTP requests
