@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'time'
 require_relative 'hobbies'
 
 module HobbyCatcher
@@ -10,14 +11,15 @@ module HobbyCatcher
         rebuild_entity Database::RecordOrm.first(id: id)
       end
 
-      def self.find_ids(records)
+      def self.find_records(records)
         records.map do |record|
-          find_hobbyid(record)
+          id,time = record.split(';')
+          find_hobbyid(id.to_i, Time.parse(time))
         end
       end
 
-      def self.find_hobbyid(hobby_id)
-        rebuild_entity Database::RecordOrm.first(hobby_id: hobby_id)
+      def self.find_hobbyid(id, time)
+        rebuild_entity Database::RecordOrm.where{updated_at >= time}.first(hobby_id: id)
       end
 
       def self.rebuild_entity(db_record)

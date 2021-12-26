@@ -68,7 +68,16 @@ module HobbyCatcher
             # GET api/v1/suggestion/{hobby_id}
             routing.get do
               response.cache_control public: true, max_age: 300
-              result = Service::ShowSuggestion.new.call(hobby_id)
+              
+              request_id = [request.env, request.path, Time.now.to_f].hash
+
+              result = Service::ShowSuggestion.new.call(
+                requested: hobby_id,
+                request_id: request_id,
+                config: App.config
+              )
+
+              # result = Service::ShowSuggestion.new.call(hobby_id)
 
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
@@ -77,6 +86,7 @@ module HobbyCatcher
 
               http_response = Representer::HttpResponse.new(result.value!)
               response.status = http_response.http_status_code
+
               Representer::Suggestion.new(result.value!.message).to_json
             end
           end
