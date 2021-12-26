@@ -20,7 +20,7 @@ module CoursesGet
           "#{@config.APP_HOST}/faye",
           body: message_body(message)
         )
-        
+   
       puts "(#{response.status})"
     rescue HTTP::ConnectionError
       puts '(Faye server not found - progress not sent)'
