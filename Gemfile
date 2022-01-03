@@ -85,3 +85,5 @@ group :development do
   gem 'reek'
   gem 'rubocop'
 end
+
+gem 'rexml', '~> 3.2', '>= 3.2.4'
