@@ -8,7 +8,7 @@ require 'dry/monads'
 module HobbyCatcher
   module Service
     # Retrieves array of all listed hobby entities
-    class ShowSuggestion
+    class ShowSearch
       include Dry::Monads[:result]
 
       DB_ERR = 'Having trouble accessing the database'
@@ -16,11 +16,6 @@ module HobbyCatcher
 
       # rubocop:disable Metrics/AbcSize
       def call(input)
-        hobby = Repository::Hobbies.find_id(input[:requested])
-        hobby.categories.each do |category|
-
-          input[:category] = category
-
           Messaging::Queue.new(App.config.CLONE_QUEUE_URL, App.config)
             .send(clone_request_json(input))
 
@@ -28,8 +23,7 @@ module HobbyCatcher
             status: :processing,
             message: { request_id: input[:request_id], msg: PROCESSING_MSG }
           ))
-
-        end
+          
         hobby = Repository::Hobbies.find_id(input[:requested])
 
         Success(Response::ApiResult.new(status: :created, message: hobby))
@@ -38,8 +32,8 @@ module HobbyCatcher
       end
 
       def clone_request_json(input)
-
-        Response::CloneRequest.new(input[:category], input[:request_id])
+        binding.pry
+        Response::CloneRequest.new(input[:requested], input[:request_id])
           .then { Representer::CloneRequest.new(_1) }
           .then(&:to_json)
       end

@@ -37,6 +37,10 @@ module HobbyCatcher
         rebuild_entity(db_course)
       end
 
+      def self.delete_all
+        Database::CourseOrm.all.map(&:delete)
+      end
+
       # rubocop:disable Metrics/MethodLength
       def self.rebuild_entity(db_record)
         return nil unless db_record
