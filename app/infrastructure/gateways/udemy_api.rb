@@ -7,13 +7,14 @@ module HobbyCatcher
   module Udemy
     # Library for Udemy API
     class Api
-      FIELDS = 'avg_rating,primary_subcategory,image_240x135,price,title,url,id'
+      FIELDS = 'avg_rating,primary_subcategory,image_240x135,price,title,url,id,content_length_video'
       def initialize(token)
         @udemy_token = token
       end
 
       def course(field, keyword)
-        Request.new(@udemy_token).path("?#{field}=#{keyword.gsub(/[ &]/, ' ' => '%20', '&' => '%26')}&fields[course]=#{FIELDS}").parse
+        keyword = keyword.gsub(/[ &]/, ' ' => '%20', '&' => '%26')
+        Request.new(@udemy_token).path("?page_size=30&#{field}=#{keyword}&fields[course]=#{FIELDS}").parse
       end
 
       # Sends out HTTP requests

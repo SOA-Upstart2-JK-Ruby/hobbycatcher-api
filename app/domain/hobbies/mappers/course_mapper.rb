@@ -13,7 +13,7 @@ module HobbyCatcher
 
       def find(field, keyword)
         data = @gateway.course(field, keyword)
-        build_entity(data)
+        DataMapper.new(data).build_entity
       end
 
       def self.build_entity(data)
@@ -37,6 +37,7 @@ module HobbyCatcher
             ud_category:    ud_category,
             price:          price,
             rating:         rating,
+            video_length:   video_length,
             owncategory_id: owncategory_id
           )
         end
@@ -66,6 +67,11 @@ module HobbyCatcher
         def rating
           avg_rating = @course['avg_rating']
           avg_rating.zero? ? 0.0 : avg_rating
+        end
+
+        def video_length
+          length = @course['content_length_video']
+          length.zero? ? 0 : length
         end
 
         def ud_category

@@ -26,7 +26,10 @@ describe 'Show Suggestion Service Test' do
       hobby = HobbyCatcher::Repository::Hobbies.find_id(HOBBY_ID)
 
       categories = HobbyCatcher::Repository::Hobbies.find_owncategories(HOBBY_ID)
-      courses =  HobbyCatcher::Udemy::CourseMapper.new(UDEMY_TOKEN).find('subcategory', CATEGORY_NAME)
+      category = HobbyCatcher::Udemy::CategoryMapper.new(UDEMY_TOKEN)
+        .find(FIELD, KEYWORD)
+      courses = category.courses
+
       courses_intros = []
       courses.map do |course_intro|
         course = HobbyCatcher::Repository::For.entity(course_intro)

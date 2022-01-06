@@ -24,21 +24,22 @@ describe 'Test API routes' do
   end
 
   describe 'Get test questions' do
-    it 'should successfully show test questions' do
-      HobbyCatcher::Service::ShowTest.new.call(QUESTION_ID)
-      get "/api/v1/test/#{QUESTION_ID}"
+    it 'should successfully show all test questions' do
+      HobbyCatcher::Service::ShowTest.new.call
+      get '/api/v1/test'
       _(last_response.status).must_equal 201
 
       question = JSON.parse last_response.body
-      _(question['description']).must_equal 'What would you do if you had a day off?'
+      _(question.length).must_equal 4
     end
 
-    it 'should report error for an invalid TEST ID' do
-      HobbyCatcher::Service::ShowTest.new.call(10)
-      get "/api/v1/test/10"
-      _(last_response.status).must_equal 500
-      _(JSON.parse(last_response.body)['status']).must_include 'error'
-    end
+    # it 'should report error for bad url' do
+    #   HobbyCatcher::Service::ShowTest.new.call
+    #   binding.pry
+    #   get "/api/v1/test/10"
+    #   _(last_response.status).must_equal 500
+    #   _(JSON.parse(last_response.body)['status']).must_include 'error'
+    # end
   end
 
   describe 'suggestion route' do
@@ -55,12 +56,16 @@ describe 'Test API routes' do
       it 'should successfully return suggestion information' do
         HobbyCatcher::Service::ShowSuggestion.new.call(HOBBY_ID)
         get "api/v1/suggestion/#{HOBBY_ID}"
+        5.times { sleep(1); print '.' }
+        get "api/v1/suggestion/#{HOBBY_ID}"
         _(last_response.status).must_equal 201
 
         hobby = JSON.parse last_response.body
-        _(hobby['price']).must_equal 'NT$1,790'
-        _(hobby['owncategory']['name']).must_equal 'Dance'
-        _(hobby['owncategory']['ownhobby']['name']).must_equal 'LION'
+        # _(hobby['categories']['name'][courses]).must_equal 'Dance'
+
+        _(hobby['name']).must_equal 'LION'
+        _(hobby['categories'][0]['name']).must_equal 'Dance'
+        (hobby['categories'][0]['courses']).length.must_equal 12
       end
       # it 'should be report error for an invalid subfolder' do
       #   HobbyCatcher::Service::ShowSuggestion.new.call(HOBBY_ID)

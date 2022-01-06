@@ -21,9 +21,9 @@ describe 'Integration Tests of Udemy API and Database' do
     end
 
     it 'HAPPY: should be able to save project from Udemy to database' do
-      courses = HobbyCatcher::Udemy::CourseMapper.new(UDEMY_TOKEN)
+      category = HobbyCatcher::Udemy::CategoryMapper.new(UDEMY_TOKEN)
         .find(FIELD, KEYWORD)
-      # courses = data
+      courses = category.courses
       courses.map do |course|
         rebuilt = HobbyCatcher::Repository::For.entity(course).create(course)
         _(rebuilt[:ud_course_id]).must_equal(course[:ud_course_id])

@@ -13,9 +13,9 @@ module HobbyCatcher
           Database::HobbyOrm.create(data)
         end
 
-        CATEGORY_FILE.map do |data|
-          Database::CategoryOrm.create(data)
-        end
+        # CATEGORY_FILE.map do |data|
+        #   Database::CategoryOrm.create(data)
+        # end
 
         QUESTION_FILE.map do |data|
           Database::QuestionOrm.create(data)

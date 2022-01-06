@@ -4,7 +4,6 @@ require 'roar/decorator'
 require 'representable/json/collection'
 require 'roar/json'
 
-
 module HobbyCatcher
   module Representer
     # Represents test information about test page

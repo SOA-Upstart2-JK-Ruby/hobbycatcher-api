@@ -50,6 +50,14 @@ group :production do
   gem 'pg', '~> 1.2'
 end
 
+# Asynchronicity
+gem 'concurrent-ruby', '~> 1.1'
+gem 'aws-sdk-sqs', '~> 1.48'
+
+# WORKER
+gem 'shoryuken', '~> 5.3'
+gem 'faye', '~> 1.4'
+
 # Testing
 group :test do
   gem 'minitest', '~> 5.0'
@@ -58,10 +66,10 @@ group :test do
   gem 'vcr', '~> 6.0'
   gem 'webmock', '~> 3.0'
 
-  gem 'headless', '~> 2.3'
-  gem 'page-object', '~> 2.3'
-  gem 'watir', '~> 7.0'
-  gem 'webdrivers', '~> 5.0'
+  # gem 'headless', '~> 2.3'
+  # gem 'page-object', '~> 2.3'
+  # gem 'watir', '~> 7.0'
+  # gem 'webdrivers', '~> 5.0'
 end
 
 group :development do
@@ -77,3 +85,5 @@ group :development do
   gem 'reek'
   gem 'rubocop'
 end
+
+gem 'rexml', '~> 3.2'
