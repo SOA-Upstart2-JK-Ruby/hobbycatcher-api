@@ -19,9 +19,6 @@ module HobbyCatcher
       routing.root do
         message = "HobbyCatcher API v1 at /api/v1/ in #{App.environment} mode"
         
-        # 存courses
-        Service::AddCoursesWorker.new.call
-
         result_response = Representer::HttpResponse.new(
           Response::ApiResult.new(status: :ok, message: message)
         )
@@ -31,6 +28,23 @@ module HobbyCatcher
       end
 
       routing.on 'api/v1' do
+        # GET api/v1/scheduler
+        routing.on 'scheduler' do
+          routing.get do
+            response.cache_control public: true, max_age: 300
+
+            # 存courses
+            Service::AddCoursesWorker.new.call
+
+            result_response = Representer::HttpResponse.new(
+              Response::ApiResult.new(status: :ok, message: "scheduler worker success")
+            )
+
+            response.status = result_response.http_status_code
+            result_response.to_json
+          end
+        end
+
         routing.on 'test' do
           # GET api/v1/test
           routing.get do
