@@ -26,28 +26,22 @@ module HobbyCatcher
       end
 
       def add_hobby_id
-        input = {}
-        input[:hobby_id] = []
-        1.upto(16) do |i|
-            input[:hobby_id].append(i)
+        (0..15).map do |id|
+          arr = id.to_s(2).rjust(4, '0').split(//)
+          Mapper::HobbySuggestions.new(arr).build_entity
         end
+
+        input = {hobby_id: (1..16).to_a}
         Success(input) 
       rescue StandardError
         Failure(Response::ApiResult.new(status: :internal_error, message: 'Could not get the news from News API.'))
       end
 
-      def get_category(input)
-
-        hobby_ids= input[:hobby_id]
-        input[:category]= []
-
-        hobby_ids.each do |hobby_id|
-          hobby= Repository::Hobbies.find_id(hobby_id)
-          hobby.categories.each do |category|
-            # 判斷沒有底下就不執行，但不執行的原因是因為噴了bug
-            input[:category].append(category) if category.courses.empty?
-          end  
+      def get_category(input) 
+        input[:category] = Repository::Categories.all.map do |category|
+          category if category.courses.empty?
         end
+
         Success(input) 
       rescue StandardError
         Failure(Response::ApiResult.new(status: :internal_error, message: 'Could not get the news from News API.'))
