@@ -28,6 +28,20 @@ module HobbyCatcher
       end
 
       routing.on 'api/v1' do
+        # GET api/v1/scheduler
+        routing.on 'scheduler' do
+          routing.get do
+            Service::AddCoursesWorker.new.call
+
+            result_response = Representer::HttpResponse.new(
+              Response::ApiResult.new(status: :ok, message: 'scheduler worker success')
+            )
+
+            response.status = result_response.http_status_code
+            result_response.to_json
+          end
+        end
+
         routing.on 'test' do
           # GET api/v1/test
           routing.get do
@@ -68,16 +82,8 @@ module HobbyCatcher
             # GET api/v1/suggestion/{hobby_id}
             routing.get do
               response.cache_control public: true, max_age: 300
-              
-              request_id = [request.env, request.path, Time.now.to_f].hash
 
-              result = Service::ShowSuggestion.new.call(
-                requested: hobby_id,
-                request_id: request_id,
-                config: App.config
-              )
-
-              # result = Service::ShowSuggestion.new.call(hobby_id)
+              result = Service::ShowSuggestion.new.call(hobby_id)
 
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)

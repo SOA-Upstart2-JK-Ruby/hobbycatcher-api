@@ -30,6 +30,10 @@ module HobbyCatcher
         rebuild_entity(db_record)
       end
 
+      def self.delete_all
+        Database::CourseOrm.all.map(&:delete)
+      end
+
       def self.create(entity)
         raise 'Course already exists' if find(entity)
 
