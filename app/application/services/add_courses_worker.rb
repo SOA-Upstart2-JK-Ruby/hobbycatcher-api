@@ -32,12 +32,14 @@ module HobbyCatcher
         end
 
         input = {hobby_id: (1..16).to_a}
+
         Success(input) 
       rescue StandardError
         Failure(Response::ApiResult.new(status: :internal_error, message: 'Could not get the news from News API.'))
       end
 
       def get_category(input) 
+
         input[:category] = Repository::Categories.all.map do |category|
           category if category.courses.empty?
         end
@@ -59,6 +61,7 @@ module HobbyCatcher
       end
 
       def store_courses_in_database(input)
+        binding.pry
         categories = input[:list]
         categories.each do |category|
           Repository::For.entity(category).update_courses(category) 
