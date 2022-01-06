@@ -29,7 +29,7 @@ module HobbyCatcher
         db_record = Database::CourseOrm.first(ud_course_id: ud_course_id)
         rebuild_entity(db_record)
       end
-      
+
       def self.delete_all
         Database::CourseOrm.all.map(&:delete)
       end

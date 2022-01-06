@@ -13,13 +13,13 @@ module HobbyCatcher
 
       def self.find_records(records)
         records.map do |record|
-          id,time = record.split(';')
+          id, time = record.split(';')
           find_hobbyid(id.to_i, Time.parse(time))
         end
       end
 
       def self.find_hobbyid(id, time)
-        rebuild_entity Database::RecordOrm.where{ updated_at >= time }.first(hobby_id: id)
+        rebuild_entity Database::RecordOrm.where { updated_at >= time }.first(hobby_id: id)
       end
 
       def self.rebuild_entity(db_record)
