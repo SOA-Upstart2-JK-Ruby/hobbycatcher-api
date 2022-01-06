@@ -50,7 +50,7 @@ namespace :db do
   task migrate: :config do
     Sequel.extension :migration
     puts "Migrating #{app.environment} database to latest"
-    Sequel::Migrator.run(app.DB, 'app/infrastructure/database/migrations',target:6, current: 6)
+    Sequel::Migrator.run(app.DB, 'app/infrastructure/database/migrations')
   end
 
   desc 'Initialize database'

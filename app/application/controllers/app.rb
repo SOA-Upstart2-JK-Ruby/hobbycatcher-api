@@ -31,9 +31,11 @@ module HobbyCatcher
         # GET api/v1/scheduler
         routing.on 'scheduler' do
           routing.get do
-            response.cache_control public: true, max_age: 300
+            # binding.pry
+            # response.cache_control public: true, max_age: 300
 
             # 存courses
+            
             Service::AddCoursesWorker.new.call
 
             result_response = Representer::HttpResponse.new(

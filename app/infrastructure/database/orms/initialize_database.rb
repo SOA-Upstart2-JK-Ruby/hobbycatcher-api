@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 HOBBY_FILE = YAML.safe_load(File.read('app/infrastructure/database/local/hobby.yml'))
-CATEGORY_FILE = YAML.safe_load(File.read('app/infrastructure/database/local/category.yml'))
+# CATEGORY_FILE = YAML.safe_load(File.read('app/infrastructure/database/local/category.yml'))
 QUESTION_FILE = YAML.safe_load(File.read('app/infrastructure/database/local/question.yml'))
 
 module HobbyCatcher
