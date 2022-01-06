@@ -6,6 +6,7 @@ require 'json'
 
 module HobbyCatcher
   module Service
+    # delete all courses from db
     class DeleteAllCourses
       include Dry::Transaction
 
@@ -15,7 +16,6 @@ module HobbyCatcher
 
       def delete_all_courses
         courses = delete_from_database
-        #news_result = OpenStruct.new(articles: news)
 
         Success(Response::ApiResult.new(status: :ok, message: courses))
       end

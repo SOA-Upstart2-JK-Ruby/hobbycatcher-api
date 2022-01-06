@@ -6,6 +6,7 @@ require 'json'
 
 module HobbyCatcher
   module Service
+    # add courses from schedule-worker
     class AddCoursesWorker
       include Dry::Transaction
 
@@ -14,7 +15,6 @@ module HobbyCatcher
       step :get_category
       step :get_courses_from_api
       step :store_courses_in_database
-
 
       private
 
@@ -27,24 +27,23 @@ module HobbyCatcher
 
       def add_hobby_id
         (0..15).map do |id|
-          arr = id.to_s(2).rjust(4, '0').split(//)
+          arr = id.to_s(2).rjust(4, '0').chars
           Mapper::HobbySuggestions.new(arr).build_entity
         end
 
-        input = {hobby_id: (1..16).to_a}
+        input = { hobby_id: (1..16).to_a }
 
-        Success(input) 
+        Success(input)
       rescue StandardError
         Failure(Response::ApiResult.new(status: :internal_error, message: 'Could not get the news from News API.'))
       end
 
-      def get_category(input) 
-
+      def get_category(input)
         input[:category] = Repository::Categories.all.map do |category|
           category if category.courses.empty?
         end
 
-        Success(input) 
+        Success(input)
       rescue StandardError
         Failure(Response::ApiResult.new(status: :internal_error, message: 'Could not get the news from News API.'))
       end
@@ -53,7 +52,7 @@ module HobbyCatcher
         categories = input[:category]
         input[:list] = []
         categories.each do |category|
-          input[:list].append(Udemy::CategoryMapper.new(App.config.UDEMY_TOKEN).find('subcategory',category.name))
+          input[:list].append(Udemy::CategoryMapper.new(App.config.UDEMY_TOKEN).find('subcategory', category.name))
         end
         Success(input)
       rescue StandardError => e
@@ -63,7 +62,7 @@ module HobbyCatcher
       def store_courses_in_database(input)
         categories = input[:list]
         categories.each do |category|
-          Repository::For.entity(category).update_courses(category) 
+          Repository::For.entity(category).update_courses(category)
         end
         Success(Response::ApiResult.new(status: :ok, message: 'Succeed'))
       rescue StandardError => e
