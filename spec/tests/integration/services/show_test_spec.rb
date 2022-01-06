@@ -31,7 +31,7 @@ describe 'Show Test Service Test' do
       # THEN: we should see our hobby in the resulting list
       _(result.success?).must_equal true
       tests = result.value!
-      _(tests).must_equal questions
+      _(tests.message).must_equal questions
     end
   end
 end

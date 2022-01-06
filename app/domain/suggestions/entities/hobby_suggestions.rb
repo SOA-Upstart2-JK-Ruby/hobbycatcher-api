@@ -13,13 +13,15 @@ module HobbyCatcher
       end
 
       def hobby_type(ans)
-        ans.any?(&:nil?) ? nil : to_hobby(Value::PersonalityTrait.new(ans[0], ans[1], ans[2], ans[3]).symbol)
+        ans.any?(&:nil?) ? nil : Value::PersonalityTrait.new(ans[0], ans[1], ans[2], ans[3]).hobby
       end
 
-      def to_hobby(animal)
-        hobby = HobbyCatcher::Database::HobbyOrm.find(name: animal.upcase)
-        hobby.update(user_num: hobby.user_num + 1)
-      end
+      # def to_hobby(animal)
+      #   # hobby suggest value
+      #   hobby = Database::HobbyOrm.find(name: animal.upcase)
+      #   HobbyCatcher::Database::RecordOrm.create(hobby_id: hobby.id)
+      #   hobby.update(user_num: hobby.user_num + 1)
+      # end
     end
   end
 end

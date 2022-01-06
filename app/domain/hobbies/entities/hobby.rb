@@ -18,6 +18,7 @@ module HobbyCatcher
       attribute :description, Strict::String
       attribute :user_num,    Strict::Integer
       attribute :categories,  Strict::Array.of(Category)
+      attribute :updated_at,  Strict::Time
 
       def to_attr_hash
         to_hash.reject { |key, _| %i[id categories].include? key }

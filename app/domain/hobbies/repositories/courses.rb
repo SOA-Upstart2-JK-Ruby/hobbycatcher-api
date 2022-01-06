@@ -54,6 +54,7 @@ module HobbyCatcher
           ud_category:    db_record.ud_category,
           price:          db_record.price,
           rating:         db_record.rating,
+          video_length:   db_record.video_length,
           owncategory_id: db_record.owncategory_id
         )
       end

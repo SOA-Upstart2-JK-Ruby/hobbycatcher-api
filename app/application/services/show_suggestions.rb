@@ -12,6 +12,7 @@ module HobbyCatcher
       include Dry::Monads[:result]
 
       DB_ERR = 'Having trouble accessing the database'
+      PROCESSING_MSG = 'catching udemy course'
 
       # rubocop:disable Metrics/AbcSize
       def call(input)
@@ -21,6 +22,12 @@ module HobbyCatcher
         Success(Response::ApiResult.new(status: :created, message: hobby))
       rescue StandardError
         Failure(Response::ApiResult.new(status: :internal_error, message: DB_ERR))
+      end
+
+      def clone_request_json(input)
+        Response::CloneRequest.new(input[:category], input[:request_id])
+          .then { Representer::CloneRequest.new(_1) }
+          .then(&:to_json)
       end
       # rubocop:enable Metrics/AbcSize
     end

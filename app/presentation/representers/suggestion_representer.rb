@@ -13,6 +13,7 @@ module HobbyCatcher
       property :name
       property :img
       property :description
+      property :updated_at
 
       collection :categories, extend: Representer::Category, class: OpenStruct
     end
