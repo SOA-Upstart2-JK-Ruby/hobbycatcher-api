@@ -61,7 +61,6 @@ module HobbyCatcher
       end
 
       def store_courses_in_database(input)
-        binding.pry
         categories = input[:list]
         categories.each do |category|
           Repository::For.entity(category).update_courses(category) 
