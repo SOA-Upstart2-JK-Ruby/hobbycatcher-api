@@ -36,7 +36,6 @@ module HobbyCatcher
             status: :processing,
             message: { request_id: input[:request_id], msg: PROCESSING_MSG }
           ))
-
         end
         hobby = Repository::Hobbies.find_id(input[:requested])
 
@@ -46,7 +45,6 @@ module HobbyCatcher
       end
 
       def clone_request_json(input)
-
         Response::CloneRequest.new(input[:category], input[:request_id])
           .then { Representer::CloneRequest.new(_1) }
           .then(&:to_json)

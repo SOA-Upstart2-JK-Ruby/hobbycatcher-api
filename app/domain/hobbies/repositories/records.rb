@@ -19,7 +19,7 @@ module HobbyCatcher
       end
 
       def self.find_hobbyid(id, time)
-        rebuild_entity Database::RecordOrm.where{updated_at >= time}.first(hobby_id: id)
+        rebuild_entity Database::RecordOrm.where{ updated_at >= time }.first(hobby_id: id)
       end
 
       def self.rebuild_entity(db_record)
