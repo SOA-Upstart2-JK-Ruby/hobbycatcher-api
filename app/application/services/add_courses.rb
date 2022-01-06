@@ -13,7 +13,6 @@ module HobbyCatcher
 
       DB_ERR = 'Having trouble accessing the database'
 
-      # rubocop:disable Metrics/AbcSize
       def call(input)
         hobby = Repository::Hobbies.find_id(input)
 
@@ -27,7 +26,6 @@ module HobbyCatcher
       rescue StandardError
         Failure(Response::ApiResult.new(status: :internal_error, message: DB_ERR))
       end
-      # rubocop:enable Metrics/AbcSize
     end
   end
 end

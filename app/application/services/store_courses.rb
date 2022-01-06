@@ -6,6 +6,7 @@ require 'json'
 
 module HobbyCatcher
   module Service
+    # Store Courses to db
     class StoreCourses
       include Dry::Transaction
 
@@ -16,7 +17,7 @@ module HobbyCatcher
       def store_courses_in_database(input)
         categories = input[:list]
         categories.each do |category|
-          Repository::For.entity(category).update_courses(category) 
+          Repository::For.entity(category).update_courses(category)
         end
         Success(Response::ApiResult.new(status: :ok, message: 'Succeed'))
       rescue StandardError => e
