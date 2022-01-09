@@ -1,24 +1,10 @@
 ---
-- id: 3715984
-  title: Full Bellydance choreography of the song Ensay!
-  url: https://www.udemy.com/course/ensayenglish/
-  price: Free
-  image: https://img-b.udemycdn.com/course/240x135/3715984_22bb_2.jpg?secure=Wzk-ymK6XvgfOrpQWNIapQ%3D%3D%2C1637565812
-  rating: 4.7
-  category: Dance
-- id: 2790000
-  title: Free Bachata Mini Course - Introduction To Bachata Dancing
-  url: https://www.udemy.com/course/freebachataminicourse/
-  price: Free
-  image: https://img-c.udemycdn.com/course/240x135/2790000_69e0_2.jpg
-  rating: 4.65
-  category: Dance
 - id: 968434
   title: How To Breakdance - From Beginner To Pro In Just 7 Days
   url: https://www.udemy.com/course/how-to-breakdance-from-beginner-to-pro-in-just-7-days/
   price: Free
   image: https://img-c.udemycdn.com/course/240x135/968434_0d92.jpg
-  rating: 4.6
+  rating: 4.75
   category: Dance
 - id: 3870294
   title: Free Salsa & Bachata Dance Videos
@@ -27,59 +13,73 @@
   image: https://img-c.udemycdn.com/course/240x135/3870294_b0d2.jpg
   rating: 4.4
   category: Dance
-- id: 3517590
-  title: Full Body Isolation & Body Roll Techniques for Dancers
-  url: https://www.udemy.com/course/full-body-isolation-body-roll-techniques-for-dancers/
+- id: 2790000
+  title: Free Bachata Mini Course - Introduction To Bachata Dancing
+  url: https://www.udemy.com/course/freebachataminicourse/
   price: Free
-  image: https://img-c.udemycdn.com/course/240x135/3517590_37bc.jpg
-  rating: 4.8
-  category: Dance
-- id: 4378672
-  title: Beginners Dance Course - Bollywood 1
-  url: https://www.udemy.com/course/beginners-dance-course-bollywood-1/
-  price: Free
-  image: https://img-b.udemycdn.com/course/240x135/4378672_0727_4.jpg?secure=EJecKZq5VtVpPWKCcbWrIQ%3D%3D%2C1637565812
-  rating: 5.0
-  category: Dance
-- id: 1467302
-  title: Disco Samba - Most Simple Social Party Dance
-  url: https://www.udemy.com/course/disco-samba-dance-course-of-most-simple-social-dance/
-  price: Free
-  image: https://img-c.udemycdn.com/course/240x135/1467302_18bc_2.jpg
-  rating: 4.45
-  category: Dance
-- id: 2897652
-  title: Dancing into Confidence
-  url: https://www.udemy.com/course/dancing-into-confidence/
-  price: Free
-  image: https://img-c.udemycdn.com/course/240x135/2897652_5e5d_3.jpg
-  rating: 4.45
-  category: Dance
-- id: 3872454
-  title: Fun Bollywood Dance workout
-  url: https://www.udemy.com/course/fun-bollywood-dance-workout/
-  price: Free
-  image: https://img-c.udemycdn.com/course/240x135/3872454_e367_4.jpg
-  rating: 4.4375
+  image: https://img-c.udemycdn.com/course/240x135/2790000_69e0_2.jpg
+  rating: 4.65
   category: Dance
 - id: 2911302
   title: Learn Bhangra Dance - Beginner Steps
   url: https://www.udemy.com/course/learn-bhangra-now/
   price: Free
   image: https://img-c.udemycdn.com/course/240x135/2911302_b602_4.jpg
-  rating: 5.0
+  rating: 4.95
+  category: Dance
+- id: 4378672
+  title: Beginners Dance Course - Bollywood 1
+  url: https://www.udemy.com/course/beginners-dance-course-bollywood-1/
+  price: Free
+  image: https://img-c.udemycdn.com/course/240x135/4378672_0727_4.jpg
+  rating: 4.375
+  category: Dance
+- id: 3715984
+  title: Full Bellydance choreography of the song Ensay!
+  url: https://www.udemy.com/course/ensayenglish/
+  price: Free
+  image: https://img-c.udemycdn.com/course/240x135/3715984_22bb_2.jpg
+  rating: 4.7
+  category: Dance
+- id: 4332316
+  title: Iso Style Choreo No. 1 Chapter 1
+  url: https://www.udemy.com/course/iso-style/
+  price: Free
+  image: https://img-c.udemycdn.com/course/240x135/4332316_7adf_2.jpg
+  rating: 0
   category: Dance
 - id: 4078654
   title: Bharathanatyam Made Easy
   url: https://www.udemy.com/course/bharathanatyam-made-easy/
   price: NT$590
-  image: https://img-b.udemycdn.com/course/240x135/4078654_a89c_2.jpg?secure=Tk6ybROpOesneWkUBCywEA%3D%3D%2C1637565812
+  image: https://img-c.udemycdn.com/course/240x135/4078654_a89c_2.jpg
   rating: 4.8333335
   category: Dance
-- id: 933420
-  title: Secrets of Great Dancers to Partner Dance With Anyone
-  url: https://www.udemy.com/course/secrets-of-great-dancers-to-partner-dance-with-anyone/
+- id: 2897652
+  title: Dancing into Confidence
+  url: https://www.udemy.com/course/dancing-into-confidence/
   price: Free
-  image: https://img-c.udemycdn.com/course/240x135/933420_e133_2.jpg
-  rating: 3.25
+  image: https://img-c.udemycdn.com/course/240x135/2897652_5e5d_3.jpg
+  rating: 4.35
+  category: Dance
+- id: 1017080
+  title: Pole Dance With World Champions - Beginner & Intermediate
+  url: https://www.udemy.com/course/pole-dance-with-world-champions-beginner-intermediate/
+  price: NT$990
+  image: https://img-c.udemycdn.com/course/240x135/1017080_63c8_2.jpg
+  rating: 4.6875
+  category: Dance
+- id: 1857956
+  title: Modern Dance Intermediate
+  url: https://www.udemy.com/course/modern-dance-intermediate/
+  price: NT$990
+  image: https://img-c.udemycdn.com/course/240x135/1857956_27e6.jpg
+  rating: 4.55
+  category: Dance
+- id: 2006558
+  title: Belly Dance! - A Total Body Workout for Beginners
+  url: https://www.udemy.com/course/belly-dance-a-total-body-workout-for-beginners/
+  price: NT$990
+  image: https://img-c.udemycdn.com/course/240x135/2006558_539a.jpg
+  rating: 4.3
   category: Dance

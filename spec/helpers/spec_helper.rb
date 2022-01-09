@@ -44,3 +44,6 @@ QUESTION_ID = 1
 def homepage
   HobbyCatcher::App.config.APP_HOST
 end
+
+# Get data in advance
+ HobbyCatcher::Service::AddCoursesWorker.new.call
