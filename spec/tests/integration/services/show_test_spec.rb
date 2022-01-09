@@ -19,7 +19,7 @@ describe 'Show Test Service Test' do
 
   describe 'Show Test (Questions)' do
     before do
-      DatabaseHelper.wipe_database
+      # DatabaseHelper.wipe_database
     end
 
     it 'HAPPY: should return test that are being watched' do
